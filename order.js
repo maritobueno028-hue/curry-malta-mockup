@@ -61,6 +61,23 @@ let couponDiscount = 0;
 let appliedPoints = 0;
 let pointsDiscount = 0;
 
+function buildOrderId() {
+  return `WEB-${Date.now()}-${Math.floor(Math.random() * 900 + 100)}`;
+}
+
+function saveOrderFallback(payload) {
+  const key = 'demoOrders';
+  const existing = JSON.parse(localStorage.getItem(key) || '[]');
+  const orderId = buildOrderId();
+  const savedOrder = {
+    orderId,
+    ...payload,
+  };
+  existing.unshift(savedOrder);
+  localStorage.setItem(key, JSON.stringify(existing));
+  return orderId;
+}
+
 function roundMoney(value) {
   return Math.round(value * 100) / 100;
 }
@@ -429,6 +446,7 @@ async function submitOrder() {
   checkoutNextButton.textContent = 'Placing...';
 
   try {
+    let orderId = '';
     const response = await fetch('/api/order', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -439,6 +457,8 @@ async function submitOrder() {
     if (!response.ok) {
       throw new Error(data.error || 'Checkout request failed. Please try again.');
     }
+
+    orderId = data.orderId;
 
     checkoutForm.reset();
     cart.length = 0;
@@ -453,11 +473,29 @@ async function submitOrder() {
 
     renderCart();
     renderCheckoutSummary();
-    checkoutSuccess.textContent = `Order confirmed. Your order ID is ${data.orderId}.`;
+    checkoutSuccess.textContent = `Order confirmed. Your order ID is ${orderId}.`;
     checkoutSuccess.classList.remove('hidden');
     showStep(1);
   } catch (error) {
-    checkoutError.textContent = error.message;
+    // Static hosting fallback: keep checkout usable without API.
+    const fallbackOrderId = saveOrderFallback(payload);
+    checkoutForm.reset();
+    cart.length = 0;
+    appliedCouponCode = '';
+    couponDiscount = 0;
+    appliedPoints = 0;
+    pointsDiscount = 0;
+    promoCodeInput.value = '';
+    pointsInput.value = '';
+    promoFeedback.textContent = '';
+    pointsFeedback.textContent = '';
+
+    renderCart();
+    renderCheckoutSummary();
+    checkoutError.textContent = '';
+    checkoutSuccess.textContent = `Order saved locally (offline mode). Your order ID is ${fallbackOrderId}.`;
+    checkoutSuccess.classList.remove('hidden');
+    showStep(1);
   } finally {
     checkoutNextButton.disabled = false;
     showStep(currentStep);

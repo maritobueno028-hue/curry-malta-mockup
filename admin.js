@@ -7,6 +7,14 @@ const refreshButton = document.getElementById('refresh-orders');
 
 let allOrders = [];
 
+function getLocalOrders() {
+  try {
+    return JSON.parse(localStorage.getItem('demoOrders') || '[]');
+  } catch {
+    return [];
+  }
+}
+
 function formatPrice(value) {
   return `EUR ${Number(value || 0).toFixed(2)}`;
 }
@@ -111,7 +119,13 @@ async function loadOrders() {
     renderFilters();
     renderOrders();
   } catch (error) {
-    ordersListElement.innerHTML = `<div class="empty">${error.message}</div>`;
+    allOrders = getLocalOrders();
+    renderStats();
+    renderFilters();
+    renderOrders();
+    if (allOrders.length === 0) {
+      ordersListElement.innerHTML = '<div class="empty">No API connection. No local demo orders found yet.</div>';
+    }
   } finally {
     refreshButton.disabled = false;
     refreshButton.textContent = 'Refresh';
