@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Orders | Emperor of India</title>
+  <meta name="description" content="Admin dashboard for orders, revenue, and locality performance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="animations.css" />
+</head>
+<body>
+  <header class="admin-header">
+    <a href="index.html">Home</a>
+    <h1>Orders Dashboard</h1>
+    <button id="refresh-orders" type="button">Refresh</button>
+  </header>
+
+  <main>
+    <section class="stats">
+      <article>
+        <p>Total Orders</p>
+        <strong id="orders-count">0</strong>
+      </article>
+      <article>
+        <p>Total Revenue</p>
+        <strong id="orders-revenue">EUR 0.00</strong>
+      </article>
+      <article>
+        <p>Localities Covered</p>
+        <strong id="orders-localities">0</strong>
+      </article>
+    </section>
+
+    <section class="filters">
+      <label for="filter-locality">Filter by locality</label>
+      <select id="filter-locality">
+        <option value="all">All localities</option>
+      </select>
+    </section>
+
+    <section class="orders-list" id="orders-list"></section>
+  </main>
+
+  <script src="admin.js"></script>
+  <script src="site-animations.js"></script>
+</body>
+</html>

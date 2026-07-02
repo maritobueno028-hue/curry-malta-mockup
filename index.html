@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emperor of India | Premium Indian Dining in Malta</title>
+  <meta name="description" content="Premium Indian dining in Malta. Reserve instantly, order in minutes, and unlock exclusive loyalty benefits." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html" aria-label="Emperor of India homepage">
+      <span class="logo-mark">E</span>
+      <span class="logo-text">Emperor of India</span>
+      <small>Est. 1994</small>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" />
+    <label class="hamburger" for="nav-toggle" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#trust">Reviews</a>
+      <a href="#offers">Offers</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="order.html" class="nav-pill">Order</a>
+      <a href="loyalty.html" class="nav-pill">Loyalty</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="kicker">Malta's Most Established Indian Restaurant</p>
+        <h1>Elegant Dining. Authentic Fire. Effortless Ordering.</h1>
+        <p>
+          Designed for modern diners: reserve instantly, order like an app, and enjoy traditional Punjabi recipes with premium hospitality.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="order.html">Order Online</a>
+          <a class="btn btn-dark" href="#reserve">Reserve a Table</a>
+          <a class="btn btn-light" href="loyalty.html">Join Loyalty Club</a>
+        </div>
+        <div class="hero-stats">
+          <article><strong>4.9/5</strong><span>Google Rating</span></article>
+          <article><strong>30+ Years</strong><span>In Malta</span></article>
+          <article><strong>18 Min</strong><span>Avg Delivery Prep</span></article>
+        </div>
+      </div>
+      <aside class="hero-booking" id="reserve">
+        <h2>Book Tonight</h2>
+        <p>Fast confirmation. No phone wait.</p>
+        <form>
+          <label for="guest-count">Guests</label>
+          <select id="guest-count" name="guest-count">
+            <option>2 guests</option>
+            <option>4 guests</option>
+            <option>6 guests</option>
+            <option>8+ guests</option>
+          </select>
+
+          <label for="reservation-date">Date</label>
+          <input id="reservation-date" type="date" name="reservation-date" />
+
+          <label for="reservation-time">Time</label>
+          <input id="reservation-time" type="time" name="reservation-time" />
+
+          <button type="button" class="btn btn-gold full">Reserve Now</button>
+        </form>
+      </aside>
+    </section>
+
+    <section id="trust" class="trust-strip">
+      <div>
+        <p>Google</p>
+        <strong>4.9 ★</strong>
+      </div>
+      <div>
+        <p>Tripadvisor</p>
+        <strong>5.0 ★</strong>
+      </div>
+      <div>
+        <p>Returning Guests</p>
+        <strong>72%</strong>
+      </div>
+      <div>
+        <p>Average Delivery Time</p>
+        <strong>32 min</strong>
+      </div>
+    </section>
+
+    <section id="menu" class="featured-menu">
+      <div class="section-head">
+        <p class="kicker">Chef Picks</p>
+        <h2>Most Ordered Dishes</h2>
+        <a href="order.html" class="text-link">Open Full Ordering Page</a>
+      </div>
+
+      <div class="dish-grid">
+        <article class="dish-card">
+          <img src="assets/dishes/optimized/butter-chicken.jpg" alt="Butter chicken" decoding="async" />
+          <div class="dish-copy">
+            <h3>Butter Chicken</h3>
+            <p>Creamy tomato butter sauce, charcoal-finished chicken.</p>
+            <div><span>EUR 16.90</span><a href="order.html">Add to order</a></div>
+          </div>
+        </article>
+        <article class="dish-card">
+          <img src="assets/dishes/optimized/lamb-rogan-josh.jpg" alt="Lamb rogan josh" loading="lazy" decoding="async" />
+          <div class="dish-copy">
+            <h3>Lamb Rogan Josh</h3>
+            <p>Slow braised lamb in Kashmiri spice reduction.</p>
+            <div><span>EUR 19.90</span><a href="order.html">Add to order</a></div>
+          </div>
+        </article>
+        <article class="dish-card">
+          <img src="assets/dishes/optimized/royal-biryani.jpg" alt="Chicken biryani" loading="lazy" decoding="async" />
+          <div class="dish-copy">
+            <h3>Royal Biryani</h3>
+            <p>Aromatic basmati rice, saffron, and tandoori chicken.</p>
+            <div><span>EUR 17.50</span><a href="order.html">Add to order</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="offers" class="offers">
+      <div class="section-head">
+        <p class="kicker">Smart Offers</p>
+        <h2>Designed to Increase Repeat Orders</h2>
+      </div>
+      <div class="offer-grid">
+        <article>
+          <h3>Lunch Prestige Menu</h3>
+          <p>Starter + main + drink for weekday professionals.</p>
+          <strong>EUR 14.90</strong>
+        </article>
+        <article>
+          <h3>Family Feast</h3>
+          <p>2 mains, 2 sides, naan basket, and dessert sampler.</p>
+          <strong>Save 18%</strong>
+        </article>
+        <article>
+          <h3>Loyalty Tuesday</h3>
+          <p>Members get double points on all takeaway and delivery.</p>
+          <strong>2x Points</strong>
+        </article>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="section-head">
+        <p class="kicker">FAQ</p>
+        <h2>Quick Answers Before You Order</h2>
+      </div>
+      <div class="faq-grid">
+        <article><h3>Do you have vegetarian options?</h3><p>Yes, over 35% of the menu is vegetarian and vegan-friendly.</p></article>
+        <article><h3>Can I schedule delivery?</h3><p>Yes, pick your ideal time in the ordering page checkout flow.</p></article>
+        <article><h3>Do you support allergies?</h3><p>Every dish includes allergen markers and kitchen notes.</p></article>
+        <article><h3>Is parking available?</h3><p>Street and nearby paid parking are available after 6 PM.</p></article>
+      </div>
+    </section>
+
+    <section class="brand-gallery">
+      <div class="section-head">
+        <p class="kicker">From Emperor of India</p>
+        <h2>Atmosphere and Signature Moments</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure><img src="assets/dishes/optimized/butter-chicken.jpg" alt="Emperor interior and dishes" loading="lazy" decoding="async" /></figure>
+        <figure><img src="assets/dishes/optimized/paneer-tikka.jpg" alt="Emperor dining table" loading="lazy" decoding="async" /></figure>
+        <figure><img src="assets/dishes/optimized/lamb-rogan-josh.jpg" alt="Emperor premium dining" loading="lazy" decoding="async" /></figure>
+        <figure><img src="assets/dishes/optimized/royal-biryani.jpg" alt="Emperor dish closeup" loading="lazy" decoding="async" /></figure>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <section>
+      <h2>Emperor of India</h2>
+      <p>Triq Gort, St. Julian's, Malta</p>
+      <p>+356 2137 6651</p>
+      <p>Daily: 12:00 PM - 11:30 PM</p>
+    </section>
+    <section>
+      <h3>Explore</h3>
+      <a href="index.html">Home</a>
+      <a href="order.html">Order Page</a>
+      <a href="loyalty.html">Loyalty Program</a>
+      <a href="admin.html">Admin Dashboard</a>
+    </section>
+    <section>
+      <h3>Guest Actions</h3>
+      <a href="#reserve">Book a Table</a>
+      <a href="order.html">Start Delivery Order</a>
+      <a href="loyalty.html">Become a Member</a>
+    </section>
+  </footer>
+
+  <div class="mobile-cta">
+    <a href="order.html">Order</a>
+    <a href="#reserve">Reserve</a>
+    <a href="loyalty.html">Rewards</a>
+  </div>
+  <script src="site-animations.js"></script>
+</body>
+</html>

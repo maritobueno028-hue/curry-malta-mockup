@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Lamb Rogan Josh">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1110"/>
+      <stop offset="100%" stop-color="#371819"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <ellipse cx="600" cy="420" rx="360" ry="220" fill="#2a1517"/>
+  <ellipse cx="600" cy="410" rx="300" ry="180" fill="#7a2e2a"/>
+  <circle cx="510" cy="370" r="46" fill="#b7543b"/>
+  <circle cx="620" cy="430" r="52" fill="#a94434"/>
+  <circle cx="700" cy="360" r="44" fill="#c05e41"/>
+  <circle cx="760" cy="440" r="36" fill="#a94c36"/>
+  <text x="70" y="120" fill="#f3d2ac" font-family="Georgia, serif" font-size="72">Lamb Rogan Josh</text>
+</svg>

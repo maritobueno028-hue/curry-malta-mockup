@@ -1,0 +1,13 @@
+{
+  "name": "curry-malta-mockup",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static server for the Curry Malta mockup website.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

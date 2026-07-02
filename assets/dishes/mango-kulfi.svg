@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Mango Kulfi">
+  <rect width="1200" height="800" fill="#14110f"/>
+  <ellipse cx="600" cy="430" rx="320" ry="200" fill="#231d18"/>
+  <rect x="470" y="250" width="90" height="250" rx="44" fill="#f1c45f"/>
+  <rect x="640" y="250" width="90" height="250" rx="44" fill="#e6b553"/>
+  <rect x="500" y="500" width="30" height="80" rx="12" fill="#b07b3a"/>
+  <rect x="670" y="500" width="30" height="80" rx="12" fill="#9f6f35"/>
+  <text x="70" y="120" fill="#f3d8aa" font-family="Georgia, serif" font-size="78">Mango Kulfi</text>
+</svg>

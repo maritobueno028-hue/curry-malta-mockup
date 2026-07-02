@@ -1,0 +1,211 @@
+:root {
+  --bg: #070707;
+  --panel: #131313;
+  --line: rgba(230, 191, 114, 0.22);
+  --gold: #e6bf72;
+  --gold-2: #c79643;
+  --text: #f4ebdd;
+  --muted: #cbbca8;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Manrope, system-ui, sans-serif;
+  background: radial-gradient(circle at 100% 0%, #1a1a1a, #070707 50%);
+  color: var(--text);
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: rgba(7, 7, 7, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.topbar nav {
+  display: flex;
+  gap: 8px;
+}
+
+.topbar nav a {
+  text-decoration: none;
+  color: #f2e7d7;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+main {
+  padding: 20px 16px 40px;
+  display: grid;
+  gap: 14px;
+}
+
+section {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.kicker {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+}
+
+.hero h1,
+section h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero h1 {
+  margin-top: 10px;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.hero {
+  background: linear-gradient(100deg, rgba(12, 12, 12, 0.92), rgba(12, 12, 12, 0.64)),
+    url("assets/dishes/optimized/royal-biryani.jpg") center/cover;
+}
+
+.lead {
+  margin-top: 10px;
+  color: #d6c8b5;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 14px;
+  background: linear-gradient(130deg, var(--gold), var(--gold-2));
+  color: #fff7ea;
+  text-decoration: none;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
+
+.tiers {
+  display: grid;
+  gap: 10px;
+}
+
+.tiers article,
+.steps article {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  background: #171717;
+}
+
+.tiers h2 {
+  color: var(--gold);
+}
+
+.tiers p {
+  margin-top: 6px;
+  color: var(--muted);
+}
+
+.tiers ul {
+  margin-top: 10px;
+  padding-left: 18px;
+  color: #f2e6d4;
+  display: grid;
+  gap: 6px;
+}
+
+.how-it-works h2 {
+  margin-bottom: 10px;
+}
+
+.steps {
+  display: grid;
+  gap: 10px;
+}
+
+.steps span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-weight: 800;
+  color: #fff7ea;
+  background: linear-gradient(130deg, var(--gold), var(--gold-2));
+  margin-bottom: 8px;
+}
+
+.join form {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f0dfc4;
+}
+
+input {
+  min-height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #191919;
+  color: #fff;
+  padding: 0 12px;
+}
+
+button {
+  margin-top: 4px;
+  min-height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(130deg, var(--gold), var(--gold-2));
+  color: #fff7ea;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+}
+
+@media (min-width: 860px) {
+  main {
+    padding: 26px 4vw 56px;
+  }
+
+  .tiers {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Online | Emperor of India</title>
+  <meta name="description" content="Order online with a streamlined mobile-first flow inspired by leading delivery apps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="order.css" />
+  <link rel="stylesheet" href="animations.css" />
+</head>
+<body>
+  <header class="order-topbar">
+    <a class="back-link" href="index.html">Home</a>
+    <h1>Order Emperor</h1>
+    <div class="topbar-actions">
+      <a class="rewards-link" href="loyalty.html">Rewards</a>
+      <a class="rewards-link" href="admin.html">Admin</a>
+    </div>
+  </header>
+
+  <main class="order-layout">
+    <section class="order-left">
+      <div class="delivery-toggle">
+        <button type="button" class="active">Delivery</button>
+        <button type="button">Pickup</button>
+      </div>
+
+      <div class="address-card">
+        <p>Delivering to</p>
+        <label for="locality-select">Locality</label>
+        <select id="locality-select">
+          <option value="st_julians">St. Julian's</option>
+          <option value="sliema">Sliema</option>
+          <option value="gzira">Gzira</option>
+          <option value="valletta">Valletta</option>
+          <option value="swieqi">Swieqi</option>
+          <option value="msida">Msida</option>
+          <option value="san_gwann">San Gwann</option>
+          <option value="birkirkara">Birkirkara</option>
+        </select>
+        <strong id="zone-eta">Estimated arrival 32-42 min</strong>
+        <span id="zone-minimum">Minimum order for this zone: EUR 15.00</span>
+      </div>
+
+      <label class="search-wrap" for="menu-search">
+        <span>Search menu</span>
+        <input id="menu-search" type="search" placeholder="Butter chicken, naan, biryani..." />
+      </label>
+
+      <div class="category-chips">
+        <button type="button" class="chip active">Popular</button>
+        <button type="button" class="chip">Starters</button>
+        <button type="button" class="chip">Mains</button>
+        <button type="button" class="chip">Vegetarian</button>
+        <button type="button" class="chip">Bread</button>
+        <button type="button" class="chip">Desserts</button>
+      </div>
+
+      <section class="menu-grid">
+        <article class="menu-item" data-name="Butter Chicken" data-price="16.9">
+          <img src="assets/dishes/optimized/butter-chicken.jpg" alt="Butter Chicken" decoding="async" />
+          <div>
+            <h2>Butter Chicken</h2>
+            <p>Signature creamy tomato sauce.</p>
+            <strong>EUR 16.90</strong>
+            <button type="button" class="add-btn">Add</button>
+          </div>
+        </article>
+
+        <article class="menu-item" data-name="Lamb Rogan Josh" data-price="19.9">
+          <img src="assets/dishes/optimized/lamb-rogan-josh.jpg" alt="Lamb Rogan Josh" loading="lazy" decoding="async" />
+          <div>
+            <h2>Lamb Rogan Josh</h2>
+            <p>Slow-cooked lamb and aromatic spices.</p>
+            <strong>EUR 19.90</strong>
+            <button type="button" class="add-btn">Add</button>
+          </div>
+        </article>
+
+        <article class="menu-item" data-name="Chicken Biryani" data-price="17.5">
+          <img src="assets/dishes/optimized/royal-biryani.jpg" alt="Chicken Biryani" loading="lazy" decoding="async" />
+          <div>
+            <h2>Chicken Biryani</h2>
+            <p>Saffron basmati rice, rich spices.</p>
+            <strong>EUR 17.50</strong>
+            <button type="button" class="add-btn">Add</button>
+          </div>
+        </article>
+
+        <article class="menu-item" data-name="Paneer Tikka" data-price="14.5">
+          <img src="assets/dishes/optimized/paneer-tikka.jpg" alt="Paneer Tikka" loading="lazy" decoding="async" />
+          <div>
+            <h2>Paneer Tikka</h2>
+            <p>Char-grilled cottage cheese and herbs.</p>
+            <strong>EUR 14.50</strong>
+            <button type="button" class="add-btn">Add</button>
+          </div>
+        </article>
+
+        <article class="menu-item" data-name="Garlic Naan" data-price="4.5">
+          <img src="assets/dishes/optimized/garlic-naan.jpg" alt="Garlic Naan" loading="lazy" decoding="async" />
+          <div>
+            <h2>Garlic Naan</h2>
+            <p>Fresh oven-baked bread with garlic butter.</p>
+            <strong>EUR 4.50</strong>
+            <button type="button" class="add-btn">Add</button>
+          </div>
+        </article>
+
+        <article class="menu-item" data-name="Mango Kulfi" data-price="6.5">
+          <img src="assets/dishes/optimized/mango-kulfi.jpg" alt="Mango Kulfi" loading="lazy" decoding="async" />
+          <div>
+            <h2>Mango Kulfi</h2>
+            <p>Traditional Indian frozen dessert.</p>
+            <strong>EUR 6.50</strong>
+            <button type="button" class="add-btn">Add</button>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <aside class="order-right" aria-label="Cart">
+      <h2>Your Order</h2>
+      <ul id="cart-items"></ul>
+
+      <div class="discount-controls">
+        <div class="discount-block">
+          <label for="promo-code">Promo Code</label>
+          <div class="inline-action">
+            <input id="promo-code" type="text" placeholder="VIP10" />
+            <button type="button" id="apply-promo">Apply</button>
+          </div>
+          <small id="promo-feedback"></small>
+        </div>
+
+        <div class="discount-block">
+          <label for="points-used">Rewards Points</label>
+          <div class="inline-action">
+            <input id="points-used" type="number" min="0" step="1" placeholder="0" />
+            <button type="button" id="apply-points">Redeem</button>
+          </div>
+          <small id="points-feedback"></small>
+        </div>
+      </div>
+
+      <div class="totals">
+        <p><span>Subtotal</span><strong id="subtotal">EUR 0.00</strong></p>
+        <p><span>Delivery Fee</span><strong id="delivery-fee">EUR 2.50</strong></p>
+        <p><span>Coupon</span><strong id="coupon-discount">-EUR 0.00</strong></p>
+        <p><span>Rewards</span><strong id="points-discount">-EUR 0.00</strong></p>
+        <p class="total"><span>Total</span><strong id="total">EUR 2.50</strong></p>
+      </div>
+      <button type="button" class="checkout-btn" id="checkout-open">Continue to Checkout</button>
+    </aside>
+  </main>
+
+  <div class="mobile-cart-bar">
+    <span id="mobile-count">0 items</span>
+    <strong id="mobile-total">EUR 2.50</strong>
+    <button type="button" id="mobile-checkout-open">Checkout</button>
+  </div>
+
+  <section class="checkout-modal" id="checkout-modal" aria-hidden="true">
+    <div class="checkout-card">
+      <button type="button" class="checkout-close" id="checkout-close" aria-label="Close checkout">x</button>
+      <p class="checkout-kicker">Secure Checkout</p>
+      <h2>Complete Your Order</h2>
+
+      <div class="checkout-steps">
+        <button type="button" class="step active" data-step="1">1. Address</button>
+        <button type="button" class="step" data-step="2">2. Payment</button>
+        <button type="button" class="step" data-step="3">3. Confirm</button>
+      </div>
+
+      <form id="checkout-form" novalidate>
+        <div class="step-panel" data-step-panel="1">
+          <p class="delivery-summary">Delivery to <strong id="checkout-locality">St. Julian's</strong></p>
+          <label for="customer-name">Full Name</label>
+          <input id="customer-name" name="customerName" type="text" required />
+
+          <label for="customer-phone">Phone</label>
+          <input id="customer-phone" name="customerPhone" type="tel" required />
+
+          <label for="customer-address">Delivery Address</label>
+          <input id="customer-address" name="customerAddress" type="text" required />
+        </div>
+
+        <div class="step-panel hidden" data-step-panel="2">
+          <label for="card-name">Card Holder</label>
+          <input id="card-name" name="cardName" type="text" required />
+
+          <label for="card-number">Card Number</label>
+          <input id="card-number" name="cardNumber" type="text" inputmode="numeric" maxlength="19" required />
+
+          <div class="inline-fields">
+            <div>
+              <label for="card-expiry">Expiry</label>
+              <input id="card-expiry" name="cardExpiry" type="text" placeholder="MM/YY" maxlength="5" required />
+            </div>
+            <div>
+              <label for="card-cvc">CVC</label>
+              <input id="card-cvc" name="cardCvc" type="text" inputmode="numeric" maxlength="4" required />
+            </div>
+          </div>
+        </div>
+
+        <div class="step-panel hidden" data-step-panel="3">
+          <p class="summary-title">Order Summary</p>
+          <ul id="checkout-summary"></ul>
+          <p class="summary-total">Final Total: <strong id="checkout-final-total">EUR 2.50</strong></p>
+        </div>
+
+        <p class="checkout-error" id="checkout-error" aria-live="polite"></p>
+
+        <div class="checkout-actions">
+          <button type="button" id="checkout-back" class="ghost-btn">Back</button>
+          <button type="button" id="checkout-next" class="checkout-next">Next</button>
+        </div>
+      </form>
+
+      <p class="checkout-success hidden" id="checkout-success"></p>
+    </div>
+  </section>
+
+  <script src="order.js"></script>
+  <script src="site-animations.js"></script>
+</body>
+</html>

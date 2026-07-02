@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Garlic Naan">
+  <rect width="1200" height="800" fill="#1a130d"/>
+  <ellipse cx="600" cy="420" rx="340" ry="210" fill="#2a1f15"/>
+  <ellipse cx="600" cy="410" rx="280" ry="160" fill="#e4c68f"/>
+  <ellipse cx="580" cy="390" rx="210" ry="110" fill="#f1d8a8"/>
+  <circle cx="470" cy="390" r="6" fill="#6d8f52"/>
+  <circle cx="540" cy="450" r="7" fill="#6d8f52"/>
+  <circle cx="640" cy="360" r="6" fill="#6d8f52"/>
+  <circle cx="700" cy="440" r="7" fill="#6d8f52"/>
+  <text x="70" y="120" fill="#f6ddb0" font-family="Georgia, serif" font-size="78">Garlic Naan</text>
+</svg>

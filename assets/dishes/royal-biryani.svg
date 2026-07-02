@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Royal Biryani">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f1710"/>
+      <stop offset="100%" stop-color="#3b2a16"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <ellipse cx="600" cy="420" rx="360" ry="220" fill="#2e2215"/>
+  <ellipse cx="600" cy="410" rx="300" ry="180" fill="#d6aa61"/>
+  <circle cx="520" cy="360" r="22" fill="#fff3c9"/>
+  <circle cx="570" cy="420" r="26" fill="#f8e8b0"/>
+  <circle cx="640" cy="350" r="20" fill="#fff6d1"/>
+  <circle cx="710" cy="420" r="24" fill="#f2dfab"/>
+  <circle cx="760" cy="360" r="18" fill="#ffeeba"/>
+  <text x="70" y="120" fill="#f5ddb3" font-family="Georgia, serif" font-size="78">Royal Biryani</text>
+</svg>

@@ -1,0 +1,583 @@
+:root {
+  --bg: #050505;
+  --panel: #121212;
+  --panel-2: #1a1a1a;
+  --line: rgba(230, 191, 114, 0.24);
+  --gold: #e6bf72;
+  --gold-2: #c59644;
+  --text: #f5ede0;
+  --muted: #c9bca9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Manrope, system-ui, sans-serif;
+  background: linear-gradient(110deg, rgba(8, 8, 8, 0.95), rgba(8, 8, 8, 0.74)),
+    url("assets/dishes/optimized/garlic-naan.jpg") center/cover;
+  color: var(--text);
+}
+
+.order-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  background: rgba(6, 6, 6, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.order-topbar h1 {
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+.back-link,
+.rewards-link {
+  text-decoration: none;
+  color: #f8eddc;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 10px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.order-layout {
+  padding: 14px;
+  display: grid;
+  gap: 12px;
+}
+
+.order-left,
+.order-right {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.delivery-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.delivery-toggle button,
+.chip,
+.add-btn,
+.checkout-btn,
+.mobile-cart-bar button {
+  border: 0;
+  border-radius: 10px;
+  min-height: 40px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 700;
+}
+
+.delivery-toggle button {
+  background: #1c1c1c;
+  color: #f3e9d8;
+}
+
+.delivery-toggle .active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-2));
+  color: #fff7ea;
+}
+
+.address-card {
+  margin-top: 10px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #171717;
+}
+
+.address-card label {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f0dfc4;
+}
+
+.address-card select {
+  margin-top: 6px;
+  min-height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #1b1b1b;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.address-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.address-card strong {
+  display: block;
+  margin-top: 2px;
+}
+
+.address-card span {
+  display: block;
+  color: var(--gold);
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.search-wrap {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.search-wrap span {
+  color: #f0dfc4;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+#menu-search {
+  min-height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0 12px;
+}
+
+.category-chips {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.chip {
+  white-space: nowrap;
+  min-width: max-content;
+  background: #1b1b1b;
+  color: #ebdfcb;
+  padding: 0 12px;
+}
+
+.chip.active {
+  background: #f3e3c7;
+  color: #17120b;
+}
+
+.menu-grid {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.menu-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #191919;
+  content-visibility: auto;
+  contain-intrinsic-size: 250px;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.menu-item div {
+  padding: 10px;
+}
+
+.menu-item h2 {
+  font-size: 18px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.menu-item p {
+  margin-top: 4px;
+  color: #d5c8b6;
+  font-size: 13px;
+}
+
+.menu-item strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--gold);
+}
+
+.add-btn {
+  margin-top: 8px;
+  width: 100%;
+  background: #f3e3c7;
+  color: #55361f;
+}
+
+.order-right h2 {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.discount-controls {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.discount-block {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 10px;
+  background: #171717;
+}
+
+.discount-block label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #f0dfc4;
+}
+
+.inline-action {
+  margin-top: 7px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+
+.inline-action input {
+  min-height: 38px;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #1f1f1f;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.inline-action button {
+  border: 1px solid var(--line);
+  background: #2a241c;
+  color: #f2e7d7;
+  min-height: 38px;
+  padding: 0 12px;
+  border-radius: 9px;
+}
+
+.discount-block small {
+  display: block;
+  margin-top: 6px;
+  color: #d9cbba;
+  min-height: 18px;
+  font-size: 12px;
+}
+
+#cart-items {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+  list-style: none;
+}
+
+#cart-items li {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 9px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  background: #181818;
+  font-size: 13px;
+}
+
+.totals {
+  margin-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.totals p {
+  display: flex;
+  justify-content: space-between;
+  color: #d5c8b6;
+}
+
+.totals .total {
+  color: #fff;
+  font-size: 17px;
+}
+
+.checkout-btn {
+  margin-top: 12px;
+  width: 100%;
+  background: linear-gradient(130deg, var(--gold), var(--gold-2));
+  color: #fff7ea;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mobile-cart-bar {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  z-index: 40;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(11, 11, 11, 0.96);
+  padding: 8px;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.mobile-cart-bar span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.mobile-cart-bar strong {
+  color: var(--gold);
+}
+
+.mobile-cart-bar button {
+  background: linear-gradient(130deg, var(--gold), var(--gold-2));
+  color: #fff7ea;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.checkout-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.74);
+  padding: 10px;
+}
+
+.checkout-modal.open {
+  display: flex;
+}
+
+.checkout-card {
+  width: min(100%, 560px);
+  max-height: 92vh;
+  overflow: auto;
+  background: #0f0f0f;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+}
+
+.checkout-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: #1d1d1d;
+  color: #fff;
+}
+
+.checkout-kicker {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 11px;
+}
+
+.checkout-card h2 {
+  margin-top: 6px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.checkout-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.step {
+  min-height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #1a1a1a;
+  border-radius: 8px;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  color: #e6dccd;
+  font-size: 12px;
+}
+
+.step.active {
+  background: linear-gradient(130deg, var(--gold), var(--gold-2));
+  color: #fff7ea;
+  border-color: transparent;
+}
+
+#checkout-form {
+  margin-top: 14px;
+}
+
+.step-panel {
+  display: grid;
+  gap: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.step-panel label {
+  color: #f0dfc4;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.step-panel input {
+  min-height: 42px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #191919;
+  color: #fff;
+  padding: 0 12px;
+}
+
+.inline-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.summary-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+.delivery-summary {
+  margin-bottom: 8px;
+  color: #d8cbb9;
+}
+
+.delivery-summary strong {
+  color: var(--gold);
+}
+
+#checkout-summary {
+  list-style: none;
+  display: grid;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+#checkout-summary li {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 8px;
+  background: #181818;
+}
+
+.summary-total {
+  margin-top: 10px;
+  color: #e5d7c4;
+}
+
+.summary-total strong {
+  color: var(--gold);
+}
+
+.checkout-error {
+  margin-top: 10px;
+  color: #f5a7a0;
+  min-height: 20px;
+  font-size: 13px;
+}
+
+.checkout-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.checkout-actions button {
+  min-height: 42px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.ghost-btn {
+  background: #1a1a1a;
+  color: #e9dfcf;
+}
+
+.checkout-next {
+  background: linear-gradient(130deg, var(--gold), var(--gold-2));
+  color: #fff7ea;
+  border-color: transparent;
+}
+
+.checkout-success {
+  margin-top: 12px;
+  border: 1px solid rgba(130, 218, 150, 0.45);
+  background: rgba(26, 63, 33, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  color: #c7f2cf;
+  font-size: 14px;
+}
+
+@media (min-width: 980px) {
+  .order-layout {
+    padding: 20px 4vw 36px;
+    grid-template-columns: 1.5fr 0.9fr;
+    align-items: start;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .order-right {
+    position: sticky;
+    top: 74px;
+  }
+
+  .mobile-cart-bar {
+    display: none;
+  }
+}

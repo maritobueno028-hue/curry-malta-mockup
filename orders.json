@@ -1,0 +1,92 @@
+﻿[
+    {
+        "orderId":  "EMP-20260702-153049-584",
+        "createdAt":  "2026-07-02T15:30:49.4574686+02:00",
+        "customer":  {
+                         "name":  "Test User",
+                         "phone":  "+35612345678",
+                         "address":  "Test Street 1, St Julians"
+                     },
+        "payment":  {
+                        "expiry":  "12/28",
+                        "cardLast4":  "4242",
+                        "cardHolder":  "Test User"
+                    },
+        "items":  [
+                      {
+                          "price":  16.9,
+                          "name":  "Butter Chicken",
+                          "qty":  1
+                      }
+                  ],
+        "subtotal":  16.9,
+        "deliveryFee":  2.5,
+        "total":  19.4
+    },
+    {
+        "orderId":  "EMP-20260702-153142-296",
+        "createdAt":  "2026-07-02T15:31:42.9717903+02:00",
+        "customer":  {
+                         "name":  "Browser Test",
+                         "phone":  "+35699887766",
+                         "address":  "5 Marina Street, St Julians"
+                     },
+        "payment":  {
+                        "cardHolder":  "Browser Test",
+                        "cardLast4":  "4242",
+                        "expiry":  "12/29"
+                    },
+        "items":  [
+                      {
+                          "name":  "Butter Chicken",
+                          "price":  16.9,
+                          "qty":  1
+                      }
+                  ],
+        "subtotal":  16.9,
+        "deliveryFee":  2.5,
+        "total":  19.4
+    },
+    {
+        "orderId":  "EMP-20260702-154142-344",
+        "createdAt":  "2026-07-02T15:41:42.6343920+02:00",
+        "locality":  "birkirkara",
+        "localityLabel":  "Birkirkara",
+        "customer":  {
+                         "name":  "Flow Test",
+                         "phone":  "+35699112233",
+                         "address":  "10 Test Road, Birkirkara"
+                     },
+        "payment":  {
+                        "cardHolder":  "Flow Test",
+                        "cardLast4":  "4242",
+                        "expiry":  "11/29"
+                    },
+        "items":  [
+                      {
+                          "name":  "Garlic Naan",
+                          "price":  4.5,
+                          "qty":  1
+                      },
+                      {
+                          "name":  "Lamb Rogan Josh",
+                          "price":  19.9,
+                          "qty":  1
+                      },
+                      {
+                          "name":  "Mango Kulfi",
+                          "price":  6.5,
+                          "qty":  1
+                      }
+                  ],
+        "subtotal":  30.9,
+        "deliveryFee":  3.5,
+        "discounts":  {
+                          "pointsDiscount":  9.27,
+                          "couponDiscount":  3.09,
+                          "couponCode":  "VIP10",
+                          "pointsUsed":  100
+                      },
+        "total":  22.04
+    }
+]
